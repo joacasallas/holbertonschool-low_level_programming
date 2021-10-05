@@ -11,10 +11,10 @@ int main(void)
 	int i;
 	int j;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i <= 9; i++)
 	{
 		putchar('0' + i);
-		for (j = 0; j < 10 && j != i; j++)
+		for (j = 1; j <= 9 && j != i; j++)
 		{
 			putchar('0' + j);
 			putchar(',');
