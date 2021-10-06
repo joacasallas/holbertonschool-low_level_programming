@@ -21,11 +21,7 @@ int main(void)
 			{
 				for (l = 0; l <= 9; l++)
 				{
-					if (k == i && l == j)
-					{
-					j++;
-					}
-					else if (k == 9 && l == 9)
+					if (k == 9 && l == 9)
 					{
 						putchar ('\n');
 					}
