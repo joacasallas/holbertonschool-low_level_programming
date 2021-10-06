@@ -11,16 +11,32 @@ int main(void)
 	int i;
 	int j;
 
-	for (i = 0; i <= 9; i++)
+	i = '0';
+	j = '1';
+	while (i <= '9')
 	{
-		for (j = 1; j <= 9 && j != i; j++)
+		putchar(i);
+		putchar(j);
+		if ((i == '8') && (j == '9'))
 		{
-			putchar('0' + i);
-			putchar('0' + j);
-			putchar(',');
+			putchar('\n');
+			i++;
+			j++;
+		}
+		else
+		{
+			putchar (',');
 			putchar(' ');
 		}
+		if (j < '9')
+		{
+			j++;
+		}
+		else
+		{
+			i++;
+			j = i + 1;
+		}
 	}
-	putchar('\n');
 	return (0);
 }
