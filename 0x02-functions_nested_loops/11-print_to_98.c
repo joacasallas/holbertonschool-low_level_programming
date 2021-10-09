@@ -3,32 +3,37 @@
 /**
  * print_to_98 -  prints all natural numbers from n to 98
  * @n: number to start
- * Return: nothing.
  */
-
 void print_to_98(int n)
 {
 	int i;
 
-	for (i = n; i <= 98; i++)
+	if (n <= 98)
 	{
-		if (i > 9)
+		for (i = n; i <= 98; i++)
 		{
-			_putchar('0' + i / 10);
-			_putchar('0' + i % 10);
+			if (i == 98)
+			{
+				printf("%d\n", i);
+			}
+			else
+			{
+				printf("%d, ", i);
+			}
 		}
-		else
+	}
+	else
+	{
+		for (i = n; i >= 98; i--)
 		{
-			_putchar('0' + i);
-		}
-		if (i != 98)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
-		else
-		{
-			_putchar('\n');
+			if (i == 98)
+			{
+				printf("%d\n", i);
+			}
+			else
+			{
+				printf("%d, ", i);
+			}
 		}
 	}
 }
