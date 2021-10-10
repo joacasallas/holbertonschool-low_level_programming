@@ -10,24 +10,19 @@ int main(void)
 {
 	unsigned long i = 1;
 	unsigned long j = 2;
-	unsigned long f = 0;
-	unsigned long k;
+	unsigned long f, k, sum;
 
-	printf("1, 2, ");
-	for (k = 3; (i + j) < 4000000; k++)
+	for (k = 3; k <= 50; k++)
 	{
 		f = i + j;
 		i = j;
 		j = f;
-		if (f > 3000000)
+		if (f % 2 == 0 && f < 4000000)
 		{
-			printf("%ld", f);
-		}
-		else
-		{
-			printf("%ld, ", f);
+			sum += f;
 		}
 	}
-	printf("\n");
+	sum = sum + 2;
+	printf("%ld\n", sum);
 	return (0);
 }
