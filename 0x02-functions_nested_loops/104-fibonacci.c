@@ -22,11 +22,11 @@ int main(void)
 		{
 			if (k == 98)
 		{
-			printf("%ld%ld", f / 1000, f % 1000);
+			printf("%ld%ld", f / 10, f % 10);
 		}
 			else
 		{
-			printf("%ld%ld, ", f / 1000, f % 1000);
+			printf("%ld%ld, ", f / 10, f % 10);
 		}
 		}
 		else
