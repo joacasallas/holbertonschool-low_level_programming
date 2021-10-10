@@ -18,20 +18,14 @@ int main(void)
 		f = (i + j);
 		i = j;
 		j = f;
-		if (k > 91)
+
+		if (k == 98)
 		{
-			if (k == 98)
-		{
-			printf("%ld%ld", f / 10, f % 10);
+			printf("%lu", f);
 		}
 			else
 		{
-			printf("%ld%ld, ", f / 10, f % 10);
-		}
-		}
-		else
-		{
-			printf("%ld, ", f);
+			printf("%lu, ", f);
 		}
 	}
 	printf("\n");
