@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	unsigned long i, j, k, prime, result;
+	unsigned long i, j, k, prime, result, finalresult;
 
 	for (i = 2; i <= 612852475143; i++)
 	{
@@ -21,11 +21,11 @@ int main(void)
 			while (612852475143 % prime == 0)
 			{
 				result = prime;
-				k = result;
-				result = k * prime;
+				k = prime;
+				finalresult = result * k;
 			}
 		}
 	}
-	printf("%lu\n", result);
+	printf("%lu\n", finalresult);
 	return (0);
 }
