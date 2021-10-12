@@ -5,19 +5,18 @@
  * @s: string to print
  * Return: Nothing
  */
-
 void print_rev(char *s)
 {
-	int i, last, j;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[i] != 0)
 	{
-		last = i;
+		i++;
 	}
-
-	for (j = last; s[j] > 0; j--)
+	while (i > 0)
 	{
-		_putchar(s[j]);
+		i--;
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
