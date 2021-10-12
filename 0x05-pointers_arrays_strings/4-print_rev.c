@@ -5,18 +5,26 @@
  * @s: string to print
  * Return: Nothing
  */
+
+int _strlen(char *s);
+
 void print_rev(char *s)
 {
-	int i = 0;
+	int i;
 
-	while (s[i] != 0)
+	for (i = _strlen(s); i >= 0; i--)
 	{
-		i++;
-	}
-	while (i > 0)
-	{
-		i--;
 		_putchar(s[i]);
 	}
 	_putchar('\n');
+}
+
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+	}
+	return (i);
 }
