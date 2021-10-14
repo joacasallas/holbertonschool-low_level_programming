@@ -1,7 +1,6 @@
 #include "main.h"
 
 int _strlen(char *src);
-char *_strcpy(char *dest, char *src);
 
 /**
  * _strcat - concatenate two strings.
@@ -12,26 +11,14 @@ char *_strcpy(char *dest, char *src);
 
 char *_strcat(char *dest, char *src)
 {
-	_strcpy(dest + _strlen(dest), src);
-	return (dest);
-}
+	int i, j = 0;
 
-/**
- * _strcpy -  copies the string pointed to by src, including the terminating \0
- * to the buffer pointed to by dest.
- * @dest: string result
- * @src: string origin
- * Return: string pointer dest
- */
-
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; i <= _strlen(src); i++)
+	for (i = _strlen(dest); src[j] != '\0'; i++)
 	{
-		dest[i] = src[i];
+		dest[i] = src[j];
+		j++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 
