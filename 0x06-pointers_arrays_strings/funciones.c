@@ -1,20 +1,7 @@
 #include "main.h"
+#include <stdio.h>
 
 int _strlen(char *src);
-char *_strcpy(char *dest, char *src);
-
-/**
- * _strcat - concatenate two strings.
- * @src: string to concatenate to other
- * @dest: string result
- * Return: a pointer to the resulting string
- */
-
-char *_strcat(char *dest, char *src)
-{
-	_strcpy (dest + _strlen(dest), src);
-	return(dest);
-}
 
 /**
  * _strcpy -  copies the string pointed to by src, including the terminating \0
