@@ -1,27 +1,40 @@
 #include "main.h"
 
+int _strlen(char *s);
+
 /**
- * _strncat - appends src to the dest string
- * @dest: string to append by src
- * @src: string to append to dest
- * @n: largest number of bytes to append
- *
- * Return: address of dest
+ * _strncat - appends src to the dest string.
+ * @dest: string result
+ * @src: string to copy
+ * @n: numbers of characteres to copy
+ * Return: a pointer to the resultant string dest
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j;
+	int i, j = 0;
 
-	i = j = 0;
-	while (*(dest + i))
-		i++;
-	while (j < n && *(src + j))
+	for (i = _strlen(dest); j <= (n - 1) && src[j] != '\0'; i++)
 	{
-		*(dest + i) = *(src + j);
-		i++;
+		dest[i] = src[j];
 		j++;
 	}
-	if (j < n)
-		*(dest + i) = *(src + j);
+	dest[i] = '\0';
 	return (dest);
+}
+
+/**
+ * _strlen - returns the length of a string
+ * @s: string to check length
+ * Return: lenght of a string.
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+	}
+	return (i);
 }
