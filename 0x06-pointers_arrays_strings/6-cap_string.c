@@ -10,7 +10,8 @@ int _strlen(char *src);
 
 char *cap_string(char *n)
 {
-	int i;
+	int i, j;
+	char tokens[] = " \t\n,;.!?\"(){}";
 
 	for (i = 0; i < _strlen(n); i++)
 	{
@@ -19,6 +20,16 @@ char *cap_string(char *n)
 			if (n[i + 1] > 'a' && n[i + 1] < 'z')
 			{
 				n[i + 1] = n[i + 1] - 32;
+			}
+		}
+		for (j = 0; j <= 12; j++)
+		{
+			if (n[i] == tokens[j])
+			{
+				if (n[i + 1] > 'a' && n[i + 1] < 'z')
+				{
+					n[i + 1] = n[i + 1] - 32;
+				}
 			}
 		}
 	}
