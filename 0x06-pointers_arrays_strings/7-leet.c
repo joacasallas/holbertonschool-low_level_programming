@@ -13,7 +13,7 @@ char *leet(char *n)
 	char *num = "4,3,0,7,1";
 	int i, j;
 
-	for (i = 0; i != '\0'; i++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
 		for (j = 0; j <= 4; j++)
 		{
