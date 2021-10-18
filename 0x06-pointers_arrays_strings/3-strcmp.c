@@ -5,8 +5,8 @@
  * @s1: First string to be compared
  * @s2: Second string to be compared
  * Return: <0: s1 is less than s2
- * Return: >0: s1 is bigger than s2
- * Return: =0: s1 equal to s2
+ * >0: s1 is bigger than s2
+ * =0: s1 equal to s2
  */
 
 int _strcmp(char *s1, char *s2)
