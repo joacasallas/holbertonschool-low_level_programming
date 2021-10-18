@@ -1,7 +1,5 @@
 #include "main.h"
 
-int _strlen(char *src);
-
 /**
  * leet -  encodes a string into 1337 (leet)
  * @n: pointer to string to encode
@@ -15,7 +13,7 @@ char *leet(char *n)
 	char *num = "4,3,0,7,1";
 	int i, j;
 
-	for (i = 0; i < _strlen(n); i++)
+	for (i = 0; i != '\0'; i++)
 	{
 		for (j = 0; j <= 4; j++)
 		{
@@ -24,20 +22,4 @@ char *leet(char *n)
 		}
 	}
 	return (n);
-}
-
-/**
- * _strlen - returns the length of a string
- * @src: string to check length
- * Return: lenght of a string.
- */
-
-int _strlen(char *src)
-{
-	int i;
-
-	for (i = 0; src[i] != '\0'; i++)
-	{
-	}
-	return (i);
 }
