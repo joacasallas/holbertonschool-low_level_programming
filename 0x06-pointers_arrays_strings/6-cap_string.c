@@ -15,6 +15,10 @@ char *cap_string(char *n)
 
 	for (i = 0; i < _strlen(n); i++)
 	{
+		if (n[0] >= 'a' && n[0] <= 'z')
+		{
+			n[i] = n[i] - 32;
+		}
 		if (n[i] == ' ')
 		{
 			if (n[i + 1] > 'a' && n[i + 1] < 'z')
