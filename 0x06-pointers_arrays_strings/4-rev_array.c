@@ -16,6 +16,6 @@ void reverse_array(int *a, int n)
 	{
 		aux = a[i];
 		a[i] = a[n - i - 1];
-		a[n - i- 1] = aux;
+		a[n - i - 1] = aux;
 	}
 }
