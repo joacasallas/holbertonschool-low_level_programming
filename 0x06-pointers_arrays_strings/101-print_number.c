@@ -8,32 +8,24 @@
 
 void print_number(int n)
 {
+	int i;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
 	}
-	if (n >= 0 && n <= 9)
+	for (i = 1000000000; i > 0; i /= 10)
 	{
-		_putchar('0' + n);
-	}
-	if (n > 9 && n <= 99)
-	{
-		_putchar('0' + n / 10);
-		_putchar('0' + n % 10);
-	}
-	if (n > 99 && n <= 999)
-	{
-		_putchar('0' + n / 100);
-		_putchar('0' + n / 10 % 10);
-		_putchar('0' + n % 10);
-	}
-	if (n > 999 && n <= 9999)
-	{
-		_putchar ('0' + n / 1000);
-		_putchar ('0' + n / 100 % 10);
-	  _putchar ('0' + n / 10 % 10);
-		_putchar ('0' + n % 10);
+		if (n / i)
+		{
+			if ((n / i) % 10 < 0)
+				_putchar(-(n / i % 10) + '0');
+			else
+				_putchar((n / i % 10) + '0');
+		}
+		else if (n / i == 0 && i == 1)
+		{
+			_putchar(n / i % 10 + '0');
+		}
 	}
 }
