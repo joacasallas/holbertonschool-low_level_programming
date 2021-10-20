@@ -1,9 +1,13 @@
 #include <stdio.h>
+
 /**
  * main - check the code
  *
+ *
+ *
  * Return: Always 0.
  */
+
 int main(void)
 {
 	int n;
@@ -12,10 +16,6 @@ int main(void)
 
 	a[2] = 1024;
 	p = &n;
-	/*
-   * Remember:
-   *
-   */
 	*(p + 5) = 98;
 	/* ...so that this prints 98\n */
 	printf("a[2] = %d\n", a[2]);
