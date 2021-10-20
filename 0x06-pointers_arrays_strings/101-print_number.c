@@ -8,10 +8,11 @@
 
 void print_number(int n)
 {
+	unsigned int num;
+
 	if (n < 0)
 	{
-		n = -n;
-		_putchar(n * -1);
+		n = num;
 	}
 	if (n >= 0 && n <= 9)
 	{
