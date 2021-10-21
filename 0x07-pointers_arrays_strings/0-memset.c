@@ -2,10 +2,19 @@
 
 /**
  * _memset - fills memory with a constant byte
- * @s: pointer memory
- * @b: constant byte
- * @n: first n bytes of memory to fills
+ * @s: pointer to string to fill
+ * @b: value to copy
+ * @n: first n characters of string to copy
  * Return: a pointer to the memory area s
  */
 
-char *_memset(char *s, char b, unsigned int n);
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i <= n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
+}
