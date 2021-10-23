@@ -1,4 +1,8 @@
 #include "main.h"
+#include <stdio.h>
+
+int _strcmp(char *s1, char *s2);
+int _strlen(char *s);
 
 /**
  * _strstr -  finds the first occurrence of the substring needle
@@ -11,22 +15,66 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	unsigned int i;
+	unsigned int len1 = _strlen(haystack);
+	unsigned int len2 = _strlen(needle);
+	char c;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	if (len2 > len1 || _strlen(needle) == 0)
 	{
-		for (j = 0; needle[j] != '\0'; j++)
-		{
-			if (haystack[i] == needle [j])
-			{
-				j++;
-			}
-			else
-			{
-				break;
-			}
-			return (haystack + i);
-		}
+		return ('\0');
 	}
-	return ('\0');
+	else
+	{
+		i = 0;
+		c = needle[0];
+		while (i < len1)
+		{
+			if (haystack[i] == c)
+			{
+				if (_strcmp(&haystack[i], needle) == 0)
+				{
+					return(haystack + i);
+				}
+			}
+			i++;
+		}
+		return ('\0');
+	}
+}
+
+	/**
+	 * _strlen - returns the length of a string
+	 * @s: string to check length
+	 * Return: lenght of a string.
+	 */
+
+	int _strlen(char *s)
+	{
+		int i;
+
+		for (i = 0; s[i] != '\0'; i++)
+		{
+		}
+		return (i);
+	}
+
+/**
+ * _strcmp - compares two strings
+ * @s1: First string to be compared
+ * @s2: Second string to be compared
+ * Return: <0: s1 is less than s2
+ * >0: s1 is bigger than s2
+ * =0: s1 equal to s2
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	int i = 0;
+
+	while (s1[i] == s2[i] && (s1[i] != '\0' || s2[i] != '\0'))
+	{
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }
