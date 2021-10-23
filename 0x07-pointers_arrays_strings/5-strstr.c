@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 	unsigned int len2 = _strlen(needle);
 	char c;
 
-	if (len2 > len1 || _strlen(needle) == 0)
+	if (len2 > len1 || _strlen(needle) == 0 || needle != haystack)
 	{
 		return ('\0');
 	}
