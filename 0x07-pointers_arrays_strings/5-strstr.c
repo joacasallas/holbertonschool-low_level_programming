@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
@@ -34,7 +33,7 @@ char *_strstr(char *haystack, char *needle)
 			{
 				if (_strcmp(&haystack[i], needle) == 0)
 				{
-					return(haystack + i);
+					return (haystack + i);
 				}
 			}
 			i++;
@@ -43,11 +42,11 @@ char *_strstr(char *haystack, char *needle)
 	}
 }
 
-	/**
-	 * _strlen - returns the length of a string
-	 * @s: string to check length
-	 * Return: lenght of a string.
-	 */
+/**
+* _strlen - returns the length of a string
+* @s: string to check length
+* Return: lenght of a string.
+*/
 
 	int _strlen(char *s)
 	{
