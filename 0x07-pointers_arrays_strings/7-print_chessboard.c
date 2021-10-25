@@ -3,7 +3,6 @@
 /**
  * print_chessboard - prints the chessboard.
  * @a: matrix pointer
- * @8: size array
  * Return: Nothing
  */
 
