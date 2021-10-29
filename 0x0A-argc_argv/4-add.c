@@ -12,8 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, sum, large;
-	char *ptr;
+	int i, j, sum = 0, large;
+	char *str;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -22,11 +22,11 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-		ptr = argv[i];
-		large = strlen(argv[i]);
+		str = argv[i];
+		large = strlen(str);
 		for (j = 0; j < large; j++)
 		{
-			if (ptr[j] < '0' || ptr[j] > '9')
+			if (str[j] < '0' || str[j] > '9')
 			{
 				printf("Error\n");
 				return (1);
