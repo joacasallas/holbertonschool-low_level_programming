@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * main - print the sum of positive numbers.
  * If no number is passed to the program, print 0
@@ -11,18 +12,28 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int sum;
+	int i, j, sum, large;
+	char *ptr;
 
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		if (*argv[i] < '0' || *argv[i] > '9')
 		{
 			printf("Error\n");
 			return (1);
 		}
+		ptr = argv[i];
+		large = strlen(argv[i]);
+		for (j = 0; j < large; j++)
+		{
+			if (ptr[j] < '0' || ptr[j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 		sum = sum + atoi(argv[i]);
 	}
-	printf("%d\n", sum);
-	return (0);
+		printf("%d\n", sum);
+		return (0);
 }
