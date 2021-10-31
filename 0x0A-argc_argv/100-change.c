@@ -33,5 +33,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	printf("%d\n", count_coins);
-	return (count_coins);
+	return (0);
 }
