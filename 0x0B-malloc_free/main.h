@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <limits.h>
 
 /*0x02-functions_nested_loops*/
 int _putchar(char c);
@@ -76,7 +80,7 @@ void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
 
-/*0x08-0x08-recursion*/
+/*-0x08-recursion*/
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
@@ -87,7 +91,10 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 
+/*0x0A. C - argc, argv*/
+
 /*0x0B-malloc_free*/
+
 char *create_array(unsigned int size, char c);
 char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
