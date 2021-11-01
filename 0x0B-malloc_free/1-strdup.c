@@ -27,6 +27,6 @@ char *_strdup(char *str)
 	{
 		ptr_malloc[j] = str[j];
 	}
-	ptr_malloc[j] = '\0';
+	ptr_malloc[i] = '\0';
 	return (ptr_malloc);
 }
