@@ -11,13 +11,13 @@
 int *array_range(int min, int max)
 {
 	int *ptr_malloc;
-	int i;
+	int i, size = (max - min) + 1;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
-	ptr_malloc = malloc(sizeof(int) * (max - min) + 1);
+	ptr_malloc = malloc(sizeof(int) * size);
 	if (ptr_malloc == NULL)
 	{
 		return (NULL);
