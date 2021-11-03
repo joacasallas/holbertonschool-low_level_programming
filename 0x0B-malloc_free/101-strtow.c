@@ -59,6 +59,6 @@ char **strtow(char *str)
 			j++;
 		}
 	}
-	ptrGrid[j] = NULL;
+	ptrGrid[j] = '\0';
 	return (ptrGrid);
 }
