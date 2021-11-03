@@ -34,6 +34,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
+	j = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ')
@@ -47,6 +48,7 @@ char **strtow(char *str)
 			j++;
 		}
 	}
+	j = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ')
