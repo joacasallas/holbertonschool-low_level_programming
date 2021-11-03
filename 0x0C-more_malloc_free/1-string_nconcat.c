@@ -47,6 +47,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr_malloc[i] = s2[j];
 	}
-	ptr_malloc += '\0';
+	ptr_malloc[i] = '\0';
 	return (ptr_malloc);
 }
