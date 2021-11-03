@@ -24,10 +24,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (num1 == 0 || num2 == 0)
-	{
-		printf("%d\n", 0);
-	}
 	mul = num1 * num2;
 	printf("%ld\n", mul);
 	return (0);
