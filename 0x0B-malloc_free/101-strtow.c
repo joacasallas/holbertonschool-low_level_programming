@@ -43,6 +43,10 @@ char **strtow(char *str)
 			}
 			k++;/*valor nulo*/
 			ptrGrid[j] = malloc(sizeof(char) * k);
+			if (ptrGrid[j] == NULL)
+			{
+				return (NULL);
+			}
 			j++;
 		}
 	}
@@ -59,6 +63,6 @@ char **strtow(char *str)
 			j++;
 		}
 	}
-	ptrGrid[j] = '\0';
+	ptrGrid[j] = NULL;
 	return (ptrGrid);
 }
