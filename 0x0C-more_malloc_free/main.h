@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+#include <limits.h>
 
 /*0x02-functions_nested_loops*/
 int _putchar(char c);
@@ -89,12 +91,24 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 
-/*0x0C-more_malloc_free*/
+/*0x0A. C - argc, argv*/
+
+/*0x0B-malloc_free*/
+
+char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
+char *str_concat(char *s1, char *s2);
+int **alloc_grid(int width, int height);
+void free_grid(int **grid, int height);
+char *argstostr(int ac, char **av);
+char **strtow(char *str);
+
+/*0x0C. C - More malloc, free*/
+void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-
 
 
 
