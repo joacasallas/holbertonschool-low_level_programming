@@ -24,7 +24,6 @@ char **strtow(char *str)
 			for (k = 0; str[i] != ' '; k++, i++)
 			{
 			}
-			k++;/*salto de linea*/
 			k++;/*valor nulo*/
 			j++;
 		}
@@ -42,7 +41,6 @@ char **strtow(char *str)
 			for (k = 0; str[i] != ' '; k++, i++)
 			{
 			}
-			k++;/*salto de linea*/
 			k++;/*valor nulo*/
 			ptrGrid[j] = malloc(sizeof(char) * k);
 			j++;
@@ -55,10 +53,8 @@ char **strtow(char *str)
 		{
 			for (k = 0; str[i] != ' '; k++, i++)
 			{
-				ptrGrid[j][k] = str[k];
+				ptrGrid[j][k] = str[i];
 			}
-			ptrGrid[j][k] = '\n';
-			k++;
 			ptrGrid[j][k] = '\0';
 			j++;
 		}
