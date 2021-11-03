@@ -19,7 +19,11 @@ int main(int argc, char *argv[])
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
-	if (num1 <= 0 || num2 <= 0)
+	if (num1 < 0 || num2 < 0)
+	{
+		printf("Error\n");
+	}
+	if (num1 == 0 || num2 == 0)
 	{
 		printf("Error\n");
 	}
