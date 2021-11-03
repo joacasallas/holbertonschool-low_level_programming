@@ -10,7 +10,7 @@
 
 char **strtow(char *str)
 {
-	int i, j = 0, k = 0, l, m;
+	int i, j = 0, k = 0, l;
 	char **ptrGrid;
 
 	if (*str == '\0' || str == NULL)
@@ -34,12 +34,9 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	for (l = 0; l <= j; l++)
+	for (l = 0; l < j; l++)
 	{
-		for (m = 0; str[m] != ' '; m++)
-		{
-		}
-		ptrGrid[l] = malloc(sizeof(char) * m);
+		ptrGrid[l] = malloc(sizeof(char) * k);
 		if (ptrGrid[l] == NULL)
 		{
 			return (NULL);
