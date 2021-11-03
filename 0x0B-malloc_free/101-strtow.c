@@ -21,7 +21,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ')
 		{
-			for (k = 0; str[k] != ' '; k++, i++)
+			for (k = 0; str[i] != ' '; k++, i++)
 			{
 			}
 			k++;/*salto de linea*/
@@ -51,7 +51,7 @@ char **strtow(char *str)
 		if (str[i] != ' ')
 		{
 			ptrGrid[j][k] = str[i];
-			for (k = 0; str[k] != ' '; k++, i++)
+			for (k = 0; str[i] != ' '; k++, i++)
 			{
 				ptrGrid[j][k] = str[k];
 			}
