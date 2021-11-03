@@ -48,14 +48,17 @@ char **strtow(char *str)
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (k = 0; str[i] != ' '; k++, i++)
+		if (str[i] != ' ')
 		{
-			ptrGrid[j][k] = str[k];
+			for (k = 0; str[i] != ' '; k++, i++)
+			{
+				ptrGrid[j][k] = str[k];
+			}
+			ptrGrid[j][k] = '\n';
+			k++;
+			ptrGrid[j][k] = '\0';
+			j++;
 		}
-		ptrGrid[j][k] = '\n';
-		k++;
-		ptrGrid[j][k] = '\0';
-		j++;
 	}
 	j++;
 	ptrGrid[j][k] = '\0';
