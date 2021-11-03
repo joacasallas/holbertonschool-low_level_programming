@@ -22,10 +22,12 @@ int main(int argc, char *argv[])
 	if (num1 < 0 || num2 < 0)
 	{
 		printf("Error\n");
+		exit(98);
 	}
 	if (num1 == 0 || num2 == 0)
 	{
 		printf("Error\n");
+		exit(98);
 	}
 	mul = num1 * num2;
 	printf("%ld\n", mul);
