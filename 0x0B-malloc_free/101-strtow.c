@@ -60,7 +60,6 @@ char **strtow(char *str)
 			j++;
 		}
 	}
-	j++;
 	ptrGrid[j][k] = '\0';
 	return (ptrGrid);
 }
