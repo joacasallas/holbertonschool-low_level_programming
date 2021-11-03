@@ -19,12 +19,15 @@ char **strtow(char *str)
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (k = 0; str[i] != ' '; k++, i++)
+		if (str[i] != ' ')
 		{
+			for (k = 0; str[i] != ' '; k++, i++)
+			{
+			}
+			k++;/*salto de linea*/
+			k++;/*valor nulo*/
+			j++;
 		}
-		k++;/*salto de linea*/
-		k++;/*valor nulo*/
-		j++;
 	}
 	j++;
 	ptrGrid = malloc(sizeof(char *) * j);
