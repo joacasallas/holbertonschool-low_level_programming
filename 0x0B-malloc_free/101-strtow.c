@@ -4,16 +4,14 @@
  * **strtow - split a string into words
  * @str: pointer string source
  * Return: pointer to an array of strings
- * Each element of this array should contain a single word
  * The last element of the returned array should be NULL
  * Returns NULL if str == NULL or str == ""
- * If your function fails, it should return NULL
  */
 
 char **strtow(char *str)
 {
-	char **ptrStrings;
-	int i, j;
+	int i, j = 0, k = 0, l, m;
+	char **ptrGrid;
 
 	if (*str == '\0' || str == NULL)
 	{
@@ -21,37 +19,49 @@ char **strtow(char *str)
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
+		if (str[i] != ' ')
+		{
+			for (k = 0; str[k] != ' '; k++, i++)
+			{
+			}
+			k++;/*salto de linea*/
+			k++;/*valor nulo*/
+			j++;
+		}
 	}
-	ptrStrings = malloc(sizeof(char *) * i + 1);
-	if (ptrStrings == NULL)
+	j++;
+	ptrGrid = malloc(sizeof(char *) * j);
+	if (ptrGrid == NULL)
 	{
 		return (NULL);
 	}
-	for (j = 0; j < i; j++)
+	for (l = 0; l <= j; l++)
 	{
-		ptrStrings[j] = malloc(sizeof(char) * i + 1);
-		if (ptrStrings[j] == NULL)
+		for (m = 0; m <= k; m++)
 		{
-			return (NULL);
-		}
-	}
-	for (i = 0, j = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] == ' ')
-		{
-			i++;
-		}
-		else if (str[i] != ' ')
-		{
-			ptrStrings[i][j] = str[i];
-			if (str[i + 1] == ' ')
+			ptrGrid[m] = malloc(sizeof(char) * k);
+			if (ptrGrid[m] == NULL)
 			{
-				ptrStrings[i][j] = '\n';
-				ptrStrings[i][j] = '\0';
-				j++;
+				return (NULL);
 			}
 		}
 	}
-	ptrStrings[i][j] = '\0';
-	return (ptrStrings);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != ' ')
+		{
+			ptrGrid[j][k] = str[i];
+			for (k = 0; str[k] != ' '; k++, i++)
+			{
+				ptrGrid[j][k] = str[k];
+			}
+			ptrGrid[j][k] = '\n';
+			k++;
+			ptrGrid[j][k] = '\0';
+			j++;
+		}
+	}
+	j++;
+	ptrGrid[j][k] = '\0';
+	return (ptrGrid);
 }
