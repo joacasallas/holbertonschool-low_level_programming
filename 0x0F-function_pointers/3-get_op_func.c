@@ -1,14 +1,12 @@
-#include "calc.h"
+#include "3-calc.h"
 
 /**
  * get_op_func - check *s to return function
  * @s: pointer to symbol-operator menu option (struct)
- * @a: first integer
- * @b: second integer
  * Return: pointer to function
  */
 
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -21,12 +19,12 @@ int (*get_op_func(char *s))(int a, int b)
 	int i;
 
 	i = 0;
-	while(i < 6)
+	while (i < 6)
 	{
-		if (ops[0][i] != s)
+		if (ops[i].op != s)
 		{
 			i++;
 		}
 	}
-	return (*ops[1][i]);
+	return (ops[i].f);
 }

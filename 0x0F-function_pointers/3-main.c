@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 
 /**
  * main - prints the result of any mathematic operation
@@ -7,11 +7,26 @@
  * Return: 0 for success
  */
 
-nt main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int result;
 
-	result = (*get_op_func(s))(atoi(a), atoi(b));
-	printf("%d", result);
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	result = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
+	if (*get_op_func(argv[2]) == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	if ((*argv[2] == '/' || *argv[2] == '%') && atoi(argv[3]) == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", result);
 	return (0);
 }
