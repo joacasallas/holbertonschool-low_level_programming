@@ -111,6 +111,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 /*0x0E-structures_typedef*/
 
+/**
+ * struct dog - New struct
+ * @name: First member
+ * @age: Second member
+ * @owner: Third member
+ * Description: new structure
+ */
+
 struct dog
 {
 	char *name;
