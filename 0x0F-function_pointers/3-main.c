@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	result = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
-	if (*get_op_func(argv[2]) == NULL)
+	if (argv[2] == NULL)
 	{
 		printf("Error\n");
 		exit(99);
