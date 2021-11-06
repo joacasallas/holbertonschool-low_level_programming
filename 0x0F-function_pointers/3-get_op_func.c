@@ -18,15 +18,15 @@ int (*get_op_func(char *s))(int a, int b)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int j;
+	int i;
 
-	j = 0;
-	while(j < 6)
+	i = 0;
+	while(i < 6)
 	{
-		if (ops[0][j] != s)
+		if (ops[0][i] != s)
 		{
-			j++;
+			i++;
 		}
 	}
-	return (*ops[1][j]);
+	return (*ops[1][i]);
 }
