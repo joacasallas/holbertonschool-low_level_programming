@@ -19,6 +19,7 @@ int (*get_op_func(char *s))(int a, int b)
 		{NULL, NULL}
 	};
 	int j;
+	char *function;
 
 	for (j = 0; j < 6; j++)
 	{
