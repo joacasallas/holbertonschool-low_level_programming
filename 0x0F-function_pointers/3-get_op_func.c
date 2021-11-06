@@ -20,9 +20,13 @@ int (*get_op_func(char *s))(int a, int b)
 	};
 	int j;
 
-	if (j < 6 && ops[0][j] != s)
+	j = 0;
+	while(j < 6)
 	{
-		j++;
+		if (ops[0][j] != s)
+		{
+			j++;
+		}
 	}
 	return (*ops[1][j]);
 }
