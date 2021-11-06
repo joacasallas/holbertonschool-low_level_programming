@@ -1,4 +1,4 @@
-#include "function_pointers.h"
+#include "calc.h"
 
 /**
  * get_op_func - check *s to return function
