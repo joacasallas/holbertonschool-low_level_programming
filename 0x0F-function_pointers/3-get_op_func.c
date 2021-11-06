@@ -24,5 +24,5 @@ int (*get_op_func(char *s))(int a, int b)
 	{
 		j++;
 	}
-	return (ops[1][j](a,b));
+	return (ops[1][j](atoi(a),atoi(b)));
 }
