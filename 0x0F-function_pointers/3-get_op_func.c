@@ -10,14 +10,21 @@
 
 int (*get_op_func(char *s))(int a, int b)
 {
-	char *function;
-	int i, j;
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int j;
 
 	for (j = 0; j < 6; j++)
 	{
-		if (struct[0][j] == s)
+		if (ops[0][j] == s)
 			{
-				function = &struct[0][j];
+				function = &ops[1][j];
 			}
 	}
 	return(function);
