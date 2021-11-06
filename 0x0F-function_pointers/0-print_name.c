@@ -8,11 +8,10 @@
  * Return: Nothing.
  */
 
-void print_name(char *name, void (*f)(char *))
+void print_name(char *name, void (*f)(char *name))
 {
 	if (f == NULL)
 	{
-		free(f);
 		exit(98);
 	}
 		(*f)(name);
