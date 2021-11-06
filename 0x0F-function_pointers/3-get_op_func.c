@@ -19,15 +19,10 @@ int (*get_op_func(char *s))(int a, int b)
 		{NULL, NULL}
 	};
 	int j;
-	char *function;
 
-	if (ops[0][j] != s)
+	if (j < 6 && ops[0][j] != s)
 	{
 		j++;
 	}
-	else
-	{
-	function = ops[1][j];
-	}
-	return (function);
+	return (ops[1][j](a,b));
 }
