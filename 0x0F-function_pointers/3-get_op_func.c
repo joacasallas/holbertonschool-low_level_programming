@@ -21,12 +21,13 @@ int (*get_op_func(char *s))(int a, int b)
 	int j;
 	char *function;
 
-	for (j = 0; j < 6; j++)
+	if (ops[0][j] != s)
 	{
-		if (ops[0][j] == s)
-			{
-				function = ops[1][j];
-			}
+		j++;
 	}
-	return(function);
+	else
+	{
+	function = ops[1][j];
+	}
+	return (function);
 }
