@@ -24,7 +24,7 @@ int (*get_op_func(char *s))(int a, int b)
 	{
 		if (ops[0][j] == s)
 			{
-				function = &ops[1][j];
+				function = ops[1][j];
 			}
 	}
 	return(function);
