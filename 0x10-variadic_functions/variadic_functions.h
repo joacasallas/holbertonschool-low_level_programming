@@ -1,11 +1,9 @@
-#ifndef _VARIADIC_FUNCTIONS_H
-#define _VARIADIC_FUNCTIONS_H
-#include <stdlib.h>
+#ifndef _VARIADIC_FUNCTIONS_
+#define _VARIADIC_FUNCTIONS_
+
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 #include <stdarg.h>
-
-
 
 /*0x02-functions_nested_loops*/
 int _putchar(char c);
@@ -147,12 +145,11 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
-/*0x10. C - Variadic functions*/
+/*0x10-variadic_functions*/
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
-
-
-#endif /*_VARIADIC_FUNCTIONS_H*/
+#endif /*_VARIADIC_FUNCTIONS_*/
