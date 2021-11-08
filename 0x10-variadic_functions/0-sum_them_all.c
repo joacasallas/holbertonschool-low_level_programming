@@ -9,7 +9,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list ptr;
-	int i = 0;
+	unsigned int i = 0;
 	int sum = 0;
 
 	if (n == 0)
@@ -17,7 +17,7 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 	}
 	va_start(ptr, n);
-	for (i = n; i > 0; i = va_arg(ptr, int))
+	for (i = 0; i < n; i++)
 	{
 		sum += va_arg(ptr, int);
 	}
