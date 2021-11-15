@@ -18,5 +18,6 @@ void free_list(list_t *head)
 		head = temp;
 	}
 	free(head->str);
+	free(temp->str);
 	free(head);
 }
