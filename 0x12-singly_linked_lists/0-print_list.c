@@ -2,28 +2,26 @@
 
 /**
  * print_list - prints all the elements of a list_t list.
- *
+ * @h: list_t variable
  * Return: the number of nodes.
  */
 
 size_t print_list(const list_t *h)
 {
-	unsigned int len = 0;
-	const list_t *tmp = h;
+	int nodes = 0;
 
-	while (tmp != NULL)
+	while (h != NULL)
 	{
-		if (tmp->next == NULL)
+		if (h->str == NULL)
 		{
-			printf("%s", tmp->str);
-			len++;
+			printf("[0] (nil)\n");
 		}
 		else
 		{
-			printf("%s", tmp->str);
-			len++;
+			printf("[%d] %s\n", h->len, h->str);
 		}
-		tmp = tmp->next;
+		h = h->next;
+		nodes++;
 	}
-	return (len);
+	return (nodes);
 }
