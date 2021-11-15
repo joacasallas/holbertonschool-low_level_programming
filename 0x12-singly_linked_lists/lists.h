@@ -2,6 +2,7 @@
 #define _LISTS_H_
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*0x12. Singly linked lists*/
 
