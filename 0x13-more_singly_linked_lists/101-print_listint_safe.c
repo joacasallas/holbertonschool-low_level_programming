@@ -10,18 +10,29 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	unsigned int len = 0;
+	listint_t *temp;
 
 	if (head != NULL)
 	{
-		while (head->next != NULL)
+		temp = head->next;
+		if (temp->next != head)
+		{
+			while (head->next != NULL)
+			{
+				printf("%d\n", head->n);
+				head = head->next;
+				len++;
+			}
+			printf("%d\n", head->n);
+			len++;
+			return (len);
+		}
+		else
 		{
 			printf("%d\n", head->n);
-			head = head->next;
-			len++;
+			printf("%d\n", temp->n);
+			len += 2;
 		}
-		printf("%d\n", head->n);
-		len++;
-		return (len);
 	}
 	exit(98);
 }
