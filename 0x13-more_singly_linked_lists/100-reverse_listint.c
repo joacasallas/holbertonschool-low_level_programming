@@ -8,22 +8,19 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *list_to_do, *reversed_list, *temp;
+	listint_t *next, *before = NULL;
 
-	if (*head == NULL)
+	if (*head != NULL)
 	{
-		return (NULL);
+		while (*head != NULL)
+		{
+			next = (*head)->next;
+			(*head)->next = before;
+			before = *head;
+			*head = next;
+		}
+		*head = before;
+		return (*head);
 	}
-	list_to_do = (*head)->next;
-	reversed_list = *head;
-	reversed_list->next = NULL;
-
-	while(list_to_do != NULL)
-	{
-		temp = list_to_do;
-		list_to_do = list_to_do->next;
-		temp->next = reversed_list;
-		reversed_list = temp;
-	}
-	return (reversed_list);
+	return (NULL);
 }
