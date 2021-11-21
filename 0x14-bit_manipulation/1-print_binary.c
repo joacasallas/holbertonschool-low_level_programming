@@ -14,23 +14,30 @@ void print_binary(unsigned long int n)
 	int number;
 
 	number = n;
-	for (exp = 0; _pow(2, exp) <= number; exp++)
+	if (number == 0)
 	{
+		printf("0");
 	}
-	exp--;
-	printf("1");
-	number = number - _pow(2, exp);
-	exp--;
-	if (number > 0)
+	else
 	{
-		while (number > 0 && exp > 0)
+		for (exp = 0; _pow(2, exp) <= number; exp++)
 		{
-			for (; _pow(2, exp) > number && exp > 0; exp--)
+		}
+		exp--;
+		printf("1");
+		number = number - _pow(2, exp);
+		exp--;
+		if (number > 0)
+		{
+			while (number > 0 && exp > 0)
 			{
-				printf("0");
+				for (; _pow(2, exp) > number && exp > 0; exp--)
+				{
+					printf("0");
+				}
+				printf("1");
+				number = number - _pow(2, exp);
 			}
-			printf("1");
-			number = number - _pow(2, exp);
 		}
 	}
 }
