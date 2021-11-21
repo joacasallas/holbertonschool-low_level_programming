@@ -12,20 +12,26 @@ void print_binary(unsigned long int n)
 {
 	int exp;
 	int number;
-	number = n;
 
-	if (n > 0)
+	number = n;
+	if (number == 0 || number == 1)
 	{
-		for (exp = 0; _pow(2, exp) < number; exp++)
+		printf("%d", number);
+	}
+	if (number > 1)
+	{
+		for (exp = 0; _pow(2, exp) <= number; exp++)
 		{
 		}
+		exp--;
 		printf("1");
 		number = number - _pow(2, exp);
+		exp--;
 		if (number > 0)
 		{
-			while (number > 0)
+			while (number > 0 && exp > 0)
 			{
-				for (; _pow(2, exp) > number; exp--)
+				for (; _pow(2, exp) > number && exp > 0; exp--)
 				{
 					printf("0");
 				}
@@ -34,7 +40,6 @@ void print_binary(unsigned long int n)
 			}
 		}
 	}
-	printf("0");
 }
 
 /**
