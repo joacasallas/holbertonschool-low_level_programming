@@ -26,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		size++;
 	}
-	for (i = size - 1; i >= 0; i--)
+	for (i = size; i >= 0; i--)
 	{
 		if (b[i] >= '0' && b[i] <= '9')
 		{
@@ -59,7 +59,7 @@ int _pow(int num, int exp)
 	}
 	for (i = 2; i <= exp; i++)
 	{
-		num = num * num;
+		num = num * 2;
 	}
 	return (num);
 }
