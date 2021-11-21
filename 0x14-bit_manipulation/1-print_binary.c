@@ -28,7 +28,10 @@ void print_binary(unsigned long int n)
 			printf("0");
 			}
 			printf("1");
-			number = number - _pow(2, exp);
+			if (number - _pow(2, exp) > 0)
+			{
+				number = number - _pow(2, exp);
+			}
 		}
 	}
 	printf("0");
