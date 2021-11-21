@@ -24,8 +24,11 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (i = size - 1; i >= 0; i--)
 	{
+		if (b[i] >= '0' && b[i] <= '9')
+		{
 		number += ((b[i] - '0') * _pow(2, exp));
 		exp++;
+		}
 	}
 	return (number);
 }
