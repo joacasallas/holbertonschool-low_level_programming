@@ -1,6 +1,6 @@
 #include "main.h"
 
-long unsigned int _pow(long unsigned int num, long unsigned int exp);
+int _pow(int num, int exp);
 
 /**
  * print_binary -  function that prints the binary representation of a number.
@@ -10,16 +10,26 @@ long unsigned int _pow(long unsigned int num, long unsigned int exp);
 
 void print_binary(unsigned long int n)
 {
-	long unsigned int exp;
+	int exp;
+	int number;
+	number = n;
 
 	if (n > 0)
 	{
-		for (exp = 0; _pow(2, exp) <= n; exp++)
+		for (exp = 0; _pow(2, exp) <= number; exp++)
 		{
-			printf("0");
 		}
 		printf("1");
-		n = n - _pow(2, exp);
+		number = number - _pow(2, exp);
+		while (number > 0)
+		{
+			for (; _pow(2, exp) > number; exp--)
+			{
+			printf("0");
+			}
+			printf("1");
+			number = number - _pow(2, exp);
+		}
 	}
 	printf("0");
 }
@@ -31,9 +41,9 @@ void print_binary(unsigned long int n)
  * Return: result
  */
 
-long unsigned int _pow(long unsigned int num, long unsigned int exp)
+int _pow(int num, int exp)
 {
-	long unsigned int i;
+	int i;
 
 	if (exp == 0)
 	{
