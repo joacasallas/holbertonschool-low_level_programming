@@ -14,6 +14,10 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int size = 0, number = 0;
 	int i = 0, exp = 0;
 
+	if (b == '\0')
+	{
+		return (0);
+	}
 	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
@@ -26,8 +30,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] >= '0' && b[i] <= '9')
 		{
-		number += ((b[i] - '0') * _pow(2, exp));
-		exp++;
+			number += (b[i] - '0') * _pow(2, exp);
+			exp++;
 		}
 	}
 	return (number);
