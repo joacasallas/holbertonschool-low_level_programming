@@ -16,20 +16,20 @@ void print_binary(unsigned long int n)
 
 	if (n > 0)
 	{
-		for (exp = 0; _pow(2, exp) <= number; exp++)
+		for (exp = 0; _pow(2, exp) < number; exp++)
 		{
 		}
 		printf("1");
 		number = number - _pow(2, exp);
-		while (number > 0)
+		if (number > 0)
 		{
-			for (; _pow(2, exp) > number; exp--)
+			while (number > 0)
 			{
-			printf("0");
-			}
-			printf("1");
-			if (number - _pow(2, exp) > 0)
-			{
+				for (; _pow(2, exp) > number; exp--)
+				{
+					printf("0");
+				}
+				printf("1");
 				number = number - _pow(2, exp);
 			}
 		}
