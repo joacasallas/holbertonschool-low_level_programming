@@ -43,6 +43,11 @@ void print_binary(unsigned long int n)
 				exp--;
 			}
 		}
+		while (number <= 0 && exp >= 0)
+		{
+			printf("0");
+			exp--;
+		}
 	}
 }
 
