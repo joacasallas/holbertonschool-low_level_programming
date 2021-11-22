@@ -23,7 +23,10 @@ void print_binary(unsigned long int n)
 		for (exp = 0; _pow(2, exp) <= number; exp++)
 		{
 		}
-		exp--;
+		if (_pow(2, exp) > number)
+		{
+			exp--;
+		}
 		printf("1");
 		number = number - _pow(2, exp);
 		exp--;
@@ -37,6 +40,7 @@ void print_binary(unsigned long int n)
 				}
 				printf("1");
 				number = number - _pow(2, exp);
+				exp--;
 			}
 		}
 	}
