@@ -30,18 +30,15 @@ void print_binary(unsigned long int n)
 		printf("1");
 		number = number - _pow(2, exp);
 		exp--;
-		if (number > 0)
+		while (number > 0 && exp > 0)
 		{
-			while (number > 0 && exp > 0)
+			for (; _pow(2, exp) > number && exp > 0; exp--)
 			{
-				for (; _pow(2, exp) > number && exp > 0; exp--)
-				{
-					printf("0");
-				}
-				printf("1");
-				number = number - _pow(2, exp);
-				exp--;
+				printf("0");
 			}
+			printf("1");
+			number = number - _pow(2, exp);
+			exp--;
 		}
 		while (number <= 0 && exp >= 0)
 		{
