@@ -1,6 +1,6 @@
 #include "main.h"
 
-unsigned int _pow(int num, int exp);
+unsigned long int _pow(int num, int exp);
 
 /**
  * print_binary -  function that prints the binary representation of a number.
@@ -53,7 +53,7 @@ void print_binary(unsigned long int n)
  * Return: result
  */
 
-unsigned int _pow(int num, int exp)
+unsigned long int _pow(int num, int exp)
 {
 	int i;
 
