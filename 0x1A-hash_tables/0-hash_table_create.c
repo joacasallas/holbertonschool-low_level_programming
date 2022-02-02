@@ -11,20 +11,16 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *ht;
 
+	if (size == 0)
+	{
+		return (NULL);
+	}
 	ht = malloc(sizeof(hash_table_t) * size);
 	if (ht == NULL)
 	{
-		free(ht);
 		return (NULL);
 	}
-	if (size == 0)
-	{
-		free(ht);
-		return (NULL);
-	}
-	else
-	{
-		free(ht);
-		return (ht);
-	}
+	ht->size = size;
+	free(ht);
+	return (ht);
 }
