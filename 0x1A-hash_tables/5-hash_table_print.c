@@ -10,14 +10,19 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
+	int comma = 0;
 
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
-		while (ht->array[i] != NULL)
+		if (ht->array[i] != NULL)
 		{
+			if (comma)
+			{
+				printf(", ");
+			}
 			printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
-			i++;
+			comma = 1;
 		}
 	}
 	printf("}\n");
