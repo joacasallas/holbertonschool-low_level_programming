@@ -32,6 +32,10 @@ void hash_table_print(const hash_table_t *ht)
 				printf("'%s': '%s'", node->key, node->value);
 				comma = 1;
 				node = node->next;
+				if (node != NULL)
+				{
+					printf(", ");
+				}
 			}
 			comma = 1;
 		}
